@@ -19,7 +19,7 @@ void PrintArr(int a[], const int n, int i) {
 
 int Amount(int a[], const int n, int am, int i) {
 	
-		if ((a[i] < 0) || (a[i] % 2 == 1 && a[i] > 0))
+		if (a[i] < 0 || a[i] % 2 == 1)
 			am ++;
 		if (i < n)
 		return Amount(a, n, am, i + 1);
@@ -29,7 +29,7 @@ int Amount(int a[], const int n, int am, int i) {
 
 int Sum(int a[], int n, int s, int i) {
 	if (i<=n){
-	if ((a[i] < 0) || (a[i] % 2 == 1 && a[i] > 0))
+	if (a[i] < 0 || a[i] % 2 == 1)
 			s += a[i];
 		return s + Sum(a, n, 0, i + 1);
 	}
@@ -38,7 +38,7 @@ int Sum(int a[], int n, int s, int i) {
 }
 
 void Zero(int a[], int n, int i) {
-		if ((a[i] < 0) || (a[i] % 2 == 1 && a[i] > 0))
+		if (a[i] < 0 || a[i] % 2 == 1)
 			a[i] = 0;
 		if (i < n)
 			Zero(a, n, i + 1);
